@@ -12,13 +12,14 @@ keywords = ["color", "art", "color-space", "color-art"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [features]
-default = ["serde"]
+default = ["serde", "std"]
+std = []
 serde = ["dep:serde"]
 random = ["dep:rand"]
 
+
 [dependencies]
 rand = {version = "0.8", optional = true}
-lazy_static = "1.4"
 thiserror = "1.0.47"
 serde = { version = "1.0.193", features = ["derive"] , optional = true}
 
